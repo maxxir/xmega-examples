@@ -1,0 +1,10 @@
+25.01.2015 00:38:01
+For XMEGA16/32/64/128a4u-au /XMEGA_C4
+PD6/D-
+PD7/D+
+PC3 - Boot BTN (with external pull-up to VCC +3.3V)
+
+FOR XMEGAa3u-XMEGAa3bu-XMEGAc3
+PE5 - Boot BTN (with external pull-up to VCC +3.3V)
+PD6/D-
+PD7/D+

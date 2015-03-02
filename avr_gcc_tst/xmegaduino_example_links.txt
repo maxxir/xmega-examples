@@ -1,0 +1,5 @@
+XMEGADUINO (Aqafuino) code example see:
+
+E:\Working\arduino-1.5.6-xmegaduino-beta5\hardware\arduino\xmega\cores\xmega\wiring.c (GPIO-Timers)
+E:\Working\arduino-1.5.6-xmegaduino-beta5\hardware\arduino\xmega\cores\xmega\wiring_analog.c (ADC & PWM)
+E:\Working\arduino-1.5.6-xmegaduino-beta5\hardware\arduino\xmega\libraries\xmDAC\xmDAC.c (DAC using)

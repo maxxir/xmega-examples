@@ -1,0 +1,14 @@
+syntax: glob
+*.cof
+*.hex
+*.o
+*.map
+*.mptags
+*.sym
+*.lst
+*.lss
+*.elf
+.svn
+*.o.d
+desktop.ini
+*main.eep

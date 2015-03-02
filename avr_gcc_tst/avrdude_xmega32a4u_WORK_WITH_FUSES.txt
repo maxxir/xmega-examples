@@ -1,0 +1,71 @@
+1)
+Читаем все фьюзы из XMEGA32A4U на stdout (Ps. для XMEGA32A4U работают: fuse1/fuse2/fuse4/fuse5 (!!fuse3/fuse0 не доступны - ИХ НЕТ)):
+avrdude -c avrispmkii -p x32a4u -U fuse1:r:-:h -U fuse2:r:-:h -U fuse4:r:-:h -U fuse5:r:-:h
+Для XMEGA32A4U c прошитым USB-FLIP бутлоадером фьюзы:
+
+avrdude: reading fuse1 memory:
+
+Reading | ################################################## | 100% -0.00s
+
+avrdude: writing output file "<stdout>"
+0x0
+avrdude: reading fuse2 memory:
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: writing output file "<stdout>"
+0xbf
+avrdude: reading fuse4 memory:
+
+Reading | ################################################## | 100% 0.01s
+
+avrdude: writing output file "<stdout>"
+0xff
+avrdude: reading fuse5 memory:
+
+Reading | ################################################## | 100% -0.00s
+
+avrdude: writing output file "<stdout>"
+0xff
+
+>Т.е имеем для бутявки корректно:
+>fuse1=0x0
+>fuse2=0xbf
+>fuse4=0xff
+>fuse5=0xff
+
+2)Программируем фьюзы для XMEGA32A4U c прошитым USB-FLIP бутлоадером
+avrdude -c avrispmkii -p x32a4u -U fuse1:w:0x0:m -U fuse2:w:0xbf:m -U fuse4:w:0xff:m -U fuse5:w:0xff:m
+ 
+
+3)Верифицируем фьюзы для XMEGA32A4U c прошитым USB-FLIP бутлоадером
+avrdude -c avrispmkii -p x32a4u -U fuse1:v:0x0:m -U fuse2:v:0xbf:m -U fuse4:v:0xff:m -U fuse5:v:0xff:m
+
+4) Читаем фьюзы в терминальном режиме:
+avrdude -c avrispmkii -p x32a4u -t
+>>> r fuse1
+>>> r fuse2
+>>> r fuse4
+>>> r fuse5
+
+5) Пишем фьюзы в терминальном режиме (XMEGA32A4U бутлоадер):
+avrdude -c avrispmkii -p x32a4u -t
+>>> w fuse1 0 0x0
+>>> w fuse2 0 0xbf
+>>> w fuse4 0 0xff
+>>> w fuse5 0 0xff
+
+5) Стираем все в терминальном режиме:
+avrdude -c avrispmkii -p x32a4u -t
+>>> erase
+
+6) Дамп флеш памяти (first 1kbytes)
+avrdude -c avrispmkii -p x32a4u -t
+>>> dump flash 0 1023
+
+7) Фьюзы default для XMEGA32A4U (без бутлоадера)
+
+>fuse1=0x0
+>fuse2=0xff
+>fuse4=0xfe
+>fuse5=0xff

@@ -1,0 +1,17 @@
+23.01.2015 03:02:17
+TODO for XMEGA
+OK 0. ADC 2 CH AutoTriggering Sweep Diffential mode (для повышения точности и отсутсвия <мертвого 0>)
+OK 1. DAC via IRQ polling (wo IRQ)
+OK 2. 32 bit timer _micros (from 2 16-bit)
+OK 3. Timer in capture mode (PWM duty cycle measure as example)
+4. Double UART via fprintf
+5. UART driver from AVR 1307 with ring buffer RX && TX
+5. DMA MEM to MEM
+6. DMA ADC to MEM
+7. DMA MEM to DAC
+8. DMA MEM to UART TX
+9. Watchdog using
+
+OK 9. Подсоединить USB connector && добиться прошивки программы через AVR FLIP (Atmel Windows USB Bootloader)
+OK 10. LUFA CDC to XMEGA
+OK 11. LUFA HID to XMEGA
