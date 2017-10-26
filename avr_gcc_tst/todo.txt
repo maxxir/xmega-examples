@@ -15,3 +15,4 @@ OK 3. Timer in capture mode (PWM duty cycle measure as example)
 OK 9. Подсоединить USB connector && добиться прошивки программы через AVR FLIP (Atmel Windows USB Bootloader)
 OK 10. LUFA CDC to XMEGA
 OK 11. LUFA HID to XMEGA
+12. git tst 26/10/17
