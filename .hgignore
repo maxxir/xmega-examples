@@ -12,3 +12,4 @@ syntax: glob
 *.o.d
 desktop.ini
 *main.eep
+*.lnk
