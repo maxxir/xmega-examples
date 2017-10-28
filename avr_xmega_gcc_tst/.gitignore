@@ -9,6 +9,6 @@
 *.elf
 .svn/
 *.o.d
-desktop.ini
+*.ini
 *main.eep
 *.lnk
